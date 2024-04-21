@@ -47,11 +47,12 @@
 
 .menu {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 72px);
   position: fixed;
   left: 0;
   top: 72px;
   background: rgba(0, 0, 0, 1);
+  overflow: auto;
   /*display: none;*/
 }
 
@@ -73,7 +74,7 @@
 .menu .select_menu .subtitle .select {
   color: #14E85C;
   font-size: 30px;
-  font-family: New York, serif;
+  font-family: "New York", sans-serif;
   font-style: italic;
   font-weight: 400;
   line-height: 30px;
@@ -101,53 +102,29 @@
   cursor: pointer;
 }
 
-.menu .menu_list .menu01 .first_text{
+.menu .menu_list .menu_select .new_york{
   color: #FFF;
-  font-family: "SF Pro", sans-serif;
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 410;
-  line-height: 100%; /* 100px */
-  letter-spacing: -2px;
-  text-transform: uppercase;
-}
-
-.menu .menu_list .menu01 .order{
-  color: rgba(255, 255, 255, 0.82);
-  font-family: "SF Pro", sans-serif;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 410;
-  line-height: 100%;
-  letter-spacing: 0.44px;
-  text-transform: uppercase;
-  margin-left: 12px;
-}
-
-.menu .menu_list .menu02 .first_text{
-  color: #FFF;
-  font-family: "New York", serif;
+  font-family: "New York", sans-serif;
   font-size: 104px;
   font-style: italic;
   font-weight: 400;
-  line-height: 100%; /* 104px */
+  line-height: 100%;
   letter-spacing: 2.08px;
   text-transform: capitalize;
-  margin-right: 32px;
 }
 
-.menu .menu_list .menu02 .second_text{
+.menu .menu_list .menu_select .sf_pro{
   color: #FFF;
   font-family: "SF Pro", sans-serif;
   font-size: 100px;
   font-style: normal;
   font-weight: 410;
-  line-height: 100%; /* 100px */
+  line-height: 100%;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.menu .menu_list .menu02 .order{
+.menu .menu_list .menu_select .order{
   color: rgba(255, 255, 255, 0.82);
   font-family: "SF Pro", sans-serif;
   font-size: 22px;
@@ -156,5 +133,20 @@
   line-height: 100%;
   letter-spacing: 0.45px;
   text-transform: uppercase;
+}
+
+.menu .menu_list .menu_select .first_text {
+  margin-right: 32px;
+}
+
+.menu .menu_list .menu_select .first_text_key{
+  margin-right: 20px;
+}
+
+.menu .menu_list .menu_select .front_number {
   margin-right: 12px;
+}
+
+.menu .menu_list .menu_select .back_number {
+  margin-left: 12px;
 }

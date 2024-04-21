@@ -1,0 +1,11 @@
+/* SF Pro 폰트 */
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../font/SF-Pro.ttf') format('truetype');
+}
+
+/* NewYork 폰트 */
+@font-face {
+  font-family: 'New York';
+  src: url('../font/NewYork.ttf') format('truetype');
+}
