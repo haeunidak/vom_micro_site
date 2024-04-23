@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="../css/font.css">
-  <link rel="stylesheet" href="../css/style.css">
-<!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">-->
-
-</head>
-<body>
-
-<div class="container">
+<div>
   <div class="header">
     <div>
-      <span class="text">SCROLL TO EXPLORE</span>
+      <span class="logo_text text">SCROLL TO EXPLORE</span>
     </div>
 
     <div class="logo">
@@ -21,16 +9,11 @@
     </div>
 
     <div class="hamburger">
-      <img src="../img/header/hamburger_menu.png" alt="hamburger">
+      <img onclick="hamburgerMenuClick()" class="menu_icon" src="../img/header/hamburger_menu.png" alt="hamburger">
     </div>
 
   </div>
 
-  <!-- TODO 메뉴 오픈 시
-        1. header 텍스트 문구 변경
-        2. 햄버거 아이콘 변경
-        3. 호버시 글자 색 초록색으로 변경 및 이미지 확인 필요
-   -->
   <div class="menu">
     <div class="select_menu">
       <span class="subtitle">
@@ -41,34 +24,47 @@
 
     <div class="menu_list">
       <div class="menu_select">
-        <span class="sf_pro">Intro</span>
-        <span class="order back_number">01</span>
+        <div onmouseenter="menuMouseEnter(this)" onmouseleave="menuMouseLeave(this)" class="menu_wrapper back">
+          <span class="sf_pro">Intro</span>
+          <span class="order back_number">01</span>
+          <div></div>
+        </div>
       </div>
 
       <div class="menu_select">
-        <span class="order front_number">02</span>
-        <span class="new_york first_text">New</span>
-        <span class="sf_pro">CAR</span>
+        <div onmouseenter="menuMouseEnter(this)" onmouseleave="menuMouseLeave(this)" class="menu_wrapper front">
+          <span class="order front_number">02</span>
+          <span class="new_york first_text">New</span>
+          <span class="sf_pro">CAR</span>
+          <div></div>
+        </div>
       </div>
 
       <div class="menu_select">
-        <span class="sf_pro first_text_key">KEY</span>
-        <span class="new_york">features</span>
-        <span class="order back_number">03</span>
+        <div onmouseenter="menuMouseEnter(this)" onmouseleave="menuMouseLeave(this)" class="menu_wrapper back">
+          <span class="sf_pro first_text_key">KEY</span>
+          <span class="new_york">features</span>
+          <span class="order back_number">03</span>
+          <div></div>
+        </div>
       </div>
 
       <div class="menu_select">
-        <span class="order front_number">04</span>
-        <span class="new_york first_text">series</span>
-        <span class="sf_pro">SV</span>
+        <div onmouseenter="menuMouseEnter(this)" onmouseleave="menuMouseLeave(this)" class="menu_wrapper front">
+          <span class="order front_number">04</span>
+          <span class="new_york first_text">series</span>
+          <span class="sf_pro">SV</span>
+          <div></div>
+        </div>
       </div>
 
       <div class="menu_select">
-        <span class="sf_pro">MORE</span>
-        <span class="order back_number">05</span>
+        <div onmouseenter="menuMouseEnter(this)" onmouseleave="menuMouseLeave(this)" class="menu_wrapper back">
+          <span class="sf_pro">MORE</span>
+          <span class="order back_number">05</span>
+          <div></div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-</body>
-</html>
