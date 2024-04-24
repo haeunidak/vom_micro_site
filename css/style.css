@@ -182,16 +182,15 @@
 .menu_hover_front_under_line {
   position: absolute;
   bottom: 10px;
-  left: 30px;
   width: 240px;
   height: 2px;
   background: linear-gradient(270deg, #14E85C 0%, #000 100%);
+  margin-left: -8%;
 }
 
 .menu_hover_back_under_line {
   position: absolute;
   bottom: 10px;
-  right: 30px;
   width: 240px;
   height: 2px;
   background: linear-gradient(90deg, #14E85C 0%, #000 100%);

@@ -14,7 +14,6 @@ window.addEventListener('load', function () {
       http.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           el.outerHTML = this.responseText;
-          init();
         }
       };
       http.open('GET', targetFile, true);
@@ -70,6 +69,13 @@ function menuMouseEnter(element) {
         } else { // 아래 줄 추가
           if (el.parentElement.classList.contains('front')) { // 번호가 앞에 있을 경우 초록 줄을 뒤에 추가
             el.classList.add('menu_hover_back_under_line');
+
+            // px 단위를 %단위와 계산 하기 위한 로직
+            let pxValue = el.parentElement.offsetWidth;
+            let percentValue = (pxValue / el.parentElement.parentElement.offsetWidth) * 100;
+            let modifiedPxValue = (percentValue - 5) * el.parentElement.parentElement.offsetWidth / 100;
+
+            el.style.marginLeft = modifiedPxValue + 'px';
 
           } else if (el.parentElement.classList.contains('back')) { // 번호가 뒤에 있을 경우 초록 줄을 앞에 추가
             el.classList.add('menu_hover_front_under_line');
