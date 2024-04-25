@@ -1,8 +1,15 @@
 /* SF Pro 폰트 */
 @font-face {
-  font-family: 'SF Pro';
+  font-family: 'SF Pro Expanded Regular';
   src: url('../font/SF-Pro.ttf') format('truetype');
   font-weight: normal;
+  font-stretch: expanded;
+}
+
+@font-face {
+  font-family: 'SF Pro Expanded Semibold';
+  src: url('../font/SF-Pro.ttf') format('truetype');
+  font-weight: 650;
   font-stretch: expanded;
 }
 
