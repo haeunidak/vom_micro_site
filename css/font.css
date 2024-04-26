@@ -13,6 +13,13 @@
   font-stretch: expanded;
 }
 
+@font-face {
+  font-family: 'SF Pro Expanded bold';
+  src: url('../font/SF-Pro.ttf') format('truetype');
+  font-weight: 500;
+  font-stretch: expanded;
+}
+
 /* NewYork 폰트 */
 @font-face {
   font-family: 'New York Italic';

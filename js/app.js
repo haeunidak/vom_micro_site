@@ -14,8 +14,19 @@ window.addEventListener('load', function () {
       http.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
           el.outerHTML = this.responseText;
+
+          // intro.html 에서 RANGE ROVER 문구 1초 뒤에 적용
+          if (targetFile.includes('intro.html')) {
+            const carTextOverlay = document.querySelector('.car_text_overlay');
+
+            console.log(carTextOverlay)
+            setTimeout(() => {
+              carTextOverlay.style.animation = 'flyInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards';
+            }, 1000);
+          }
         }
       };
+
       http.open('GET', targetFile, true);
       http.send();
     }

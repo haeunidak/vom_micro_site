@@ -212,13 +212,14 @@
 
 .intro_container .intro_text_overlay {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 100%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  animation: flyIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;;
+  animation: flyIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   opacity: 0;
+  white-space: nowrap;
 }
 
 @keyframes flyIn {
@@ -226,9 +227,14 @@
     left: 100%;
     opacity: 1;
   }
+  25% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-40px);
+    opacity: 1;
+  }
   50% {
     left: 50%;
-    transform: translate(-50%, -50%) translateX(-50px);
+    transform: translate(-50%, -50%) translateX(40px);
     opacity: 1;
   }
   100% {
@@ -238,14 +244,13 @@
   }
 }
 
-
 .intro_container .intro_text_overlay .fly_in {
   display: inline-block;
 }
 
 .intro_container .intro_text_overlay .intro_range_rover {
   font-family: "SF Pro Expanded Semibold", sans-serif;
-  font-size: 24px;
+  font-size: 19px;
   font-style: normal;
   line-height: 100%;
   letter-spacing: 0.48px;
@@ -253,3 +258,59 @@
 }
 
 
+.intro_container .car_text_overlay {
+  position: absolute;
+  top: 53%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+@keyframes flyInLeft {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  20% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-800px);
+    opacity: 1;
+  }
+  40% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(800px);
+    opacity: 1;
+  }
+  60% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-100px);
+    opacity: 1;
+  }
+  80% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(100px);
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+  }
+}
+
+.intro_container .car_text_overlay .fly_in {
+  display: inline-block;
+}
+
+/* TODO 폰트 변경 필요 */
+.intro_container .car_text_overlay .range_rover {
+  font-family: "SF Pro Expanded bold", sans-serif;
+  font-size: 80px;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
