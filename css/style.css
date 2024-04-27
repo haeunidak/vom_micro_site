@@ -1,15 +1,25 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 내용을 수직으로 가운데 정렬합니다. */
+@import url('./animation.css');
+
+body {
+  overflow-x: hidden;
 }
 
-.header_container {
+.container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+}
+
+.container .header_container {
   z-index: 10;
+  position: relative;
 }
 
 .header {
-  width: 100%;
+  width: 100vw;
   height: 72px;
   border: 1px solid #6B6B6B;
   position: fixed;
@@ -71,7 +81,7 @@
   max-height: 0;
 }
 
-.on {
+.menu .on {
   max-height: 100vh;
   visibility: visible;
   opacity: 1;
@@ -103,7 +113,7 @@
   margin-right: 10px;
 }
 
-.menu .select_menu .subtitle .and_go{
+.menu .select_menu .subtitle .and_go {
   color: #FFF;
   font-family: "SF Pro Expanded Regular", sans-serif;
   font-size: 26px;
@@ -129,7 +139,7 @@
   cursor: pointer;
 }
 
-.menu .menu_list .menu_select .new_york{
+.menu .menu_list .menu_select .new_york {
   color: #FFF;
   font-family: "New York Italic", sans-serif;
   font-size: 104px;
@@ -138,7 +148,7 @@
   letter-spacing: 2.08px;
 }
 
-.menu .menu_list .menu_select .sf_pro{
+.menu .menu_list .menu_select .sf_pro {
   color: #FFF;
   font-family: "SF Pro Expanded Regular", sans-serif;
   font-size: 100px;
@@ -149,7 +159,7 @@
   text-transform: uppercase;
 }
 
-.menu .menu_list .menu_select .order{
+.menu .menu_list .menu_select .order {
   color: rgba(255, 255, 255, 0.82);
   font-family: "SF Pro Expanded Regular", sans-serif;
   font-size: 22px;
@@ -164,7 +174,7 @@
   margin-right: 32px;
 }
 
-.menu .menu_list .menu_select .first_text_key{
+.menu .menu_list .menu_select .first_text_key {
   margin-right: 20px;
 }
 
@@ -176,7 +186,7 @@
   margin-left: 12px;
 }
 
-.menu_hover{
+.menu_hover {
   color: #14E85C !important;
 }
 
@@ -197,11 +207,11 @@
   background: linear-gradient(90deg, #14E85C 0%, #000 100%);
 }
 
-.intro_container {
-  position: absolute;
+.container .intro_container {
+  position: relative;
   width: 100vw;
-  height: calc(100vh - 72px);
-  top: 72px;
+  height: calc(100vh - 65px);
+  top: 65px;
 }
 
 .intro_container .intro_video {
@@ -217,31 +227,9 @@
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  animation: flyIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation: flyInRightIntro 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   opacity: 0;
   white-space: nowrap;
-}
-
-@keyframes flyIn {
-  0% {
-    left: 100%;
-    opacity: 1;
-  }
-  25% {
-    left: 50%;
-    transform: translate(-50%, -50%) translateX(-40px);
-    opacity: 1;
-  }
-  50% {
-    left: 50%;
-    transform: translate(-50%, -50%) translateX(40px);
-    opacity: 1;
-  }
-  100% {
-    left: 50%;
-    transform: translate(-50%, -50%) translateX(0);
-    opacity: 1;
-  }
 }
 
 .intro_container .intro_text_overlay .fly_in {
@@ -269,39 +257,7 @@
   white-space: nowrap;
 }
 
-@keyframes flyInLeft {
-  0% {
-    left: -100%;
-    opacity: 1;
-  }
-  20% {
-    left: 50%;
-    transform: translate(-50%, -50%) translateX(-800px);
-    opacity: 1;
-  }
-  40% {
-    left: 50%;
-    transform: translate(-50%, -50%) translateX(800px);
-    opacity: 1;
-  }
-  60% {
-    left: 50%;
-    transform: translate(-50%, -50%) translateX(-100px);
-    opacity: 1;
-  }
-  80% {
-    left: 50%;
-    transform: translate(-50%, -50%) translateX(100px);
-    opacity: 1;
-  }
-  100% {
-    left: 50%;
-    transform: translate(-50%, -50%) translateX(0);
-    opacity: 1;
-  }
-}
-
-.intro_container .car_text_overlay .fly_in {
+.fly_in {
   display: inline-block;
 }
 
@@ -313,4 +269,77 @@
   line-height: 100%;
   letter-spacing: 0.48px;
   text-transform: uppercase;
+}
+
+.container .story_container {
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 65px);
+  background-color: black;
+  top: 65px;
+}
+
+.container .story_container .under_line {
+  position: absolute;
+  width: calc(100vw - 160px);
+  height: 1px;
+  background: #7C7C7C;
+  top: 82%;
+  left: 80px;
+}
+
+.container .story_container .since_text_overlay {
+  position: absolute;
+  top: 63%;
+  left: -50%;
+}
+
+.container .story_container .since_text_overlay .since {
+  color: rgba(20, 232, 92, 0.34);
+  font-family: "New York", sans-serif;
+  font-size: 140px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.container .story_container .open_date_overlay {
+  position: absolute;
+  top: 63%;
+  right: -30%;
+}
+
+.container .story_container .open_date_overlay .year {
+  color: rgba(20, 232, 92, 0.34);
+  font-family: "New York", sans-serif;
+  font-size: 140px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.container .story_container .since_text_overlay .on {
+  position: absolute;
+  animation: flyInLeftOpenDate 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.container .story_container .since_text_overlay .off {
+  position: absolute;
+  animation: flyOutLeftOpenDate 1s forwards;
+}
+
+.container .story_container .open_date_overlay .on {
+  position: absolute;
+  animation: flyInRightOpenDate 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.container .story_container .open_date_overlay .off {
+  position: absolute;
+  animation: flyOutRightOpenDate 1s forwards;
 }

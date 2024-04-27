@@ -22,6 +22,12 @@
 
 /* NewYork 폰트 */
 @font-face {
+  font-family: 'New York';
+  src: url('../font/NewYork.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
   font-family: 'New York Italic';
   src: url('../font/NewYorkItalic.ttf') format('truetype');
   font-weight: normal;

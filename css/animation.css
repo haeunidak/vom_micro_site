@@ -1,0 +1,95 @@
+@keyframes flyInRightIntro {
+  0% {
+    left: 100%;
+    opacity: 1;
+  }
+  25% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-40px);
+    opacity: 1;
+  }
+  50% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(40px);
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInLeftIntro {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  20% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-800px);
+    opacity: 1;
+  }
+  40% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(800px);
+    opacity: 1;
+  }
+  60% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-100px);
+    opacity: 1;
+  }
+  80% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(100px);
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInLeftOpenDate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(175%, 0) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyOutLeftOpenDate {
+  0% {
+    transform: translate(175%, 0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) translateX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flyInRightOpenDate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-265%, 0) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyOutRightOpenDate {
+  0% {
+    transform: translate(-265%, 0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) translateX(0);
+    opacity: 0;
+  }
+}

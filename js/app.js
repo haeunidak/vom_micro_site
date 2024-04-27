@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
 
             console.log(carTextOverlay)
             setTimeout(() => {
-              carTextOverlay.style.animation = 'flyInLeft 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards';
+              carTextOverlay.style.animation = 'flyInLeftIntro 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards';
             }, 1000);
           }
         }
