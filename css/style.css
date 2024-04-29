@@ -281,23 +281,23 @@ body {
 
 .container .story_container .under_line {
   position: absolute;
-  width: calc(100vw - 160px);
+  width: 150vh;
   height: 1px;
   background: #7C7C7C;
-  top: 82%;
-  left: 80px;
+  top: 82vh;
+  left: 22vh;
 }
 
 .container .story_container .since_text_overlay {
   position: absolute;
-  top: 63%;
-  left: -50%;
+  top: calc(65vh - 65px);
+  left: -95vh;
 }
 
 .container .story_container .since_text_overlay .since {
   color: rgba(20, 232, 92, 0.34);
   font-family: "New York", sans-serif;
-  font-size: 140px;
+  font-size: 27vh;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -306,14 +306,14 @@ body {
 
 .container .story_container .open_date_overlay {
   position: absolute;
-  top: 63%;
-  right: -30%;
+  top: calc(65vh - 65px);
+  left: 248vh;
 }
 
 .container .story_container .open_date_overlay .year {
   color: rgba(20, 232, 92, 0.34);
   font-family: "New York", sans-serif;
-  font-size: 140px;
+  font-size: 27vh;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
