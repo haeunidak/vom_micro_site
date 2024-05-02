@@ -20,6 +20,24 @@
   font-stretch: expanded;
 }
 
+@font-face {
+  font-family: 'SF Pro Medium Italic';
+  src: url('../font/SF-Pro.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'SF Pro Regular Italic';
+  src: url('../font/SF-Pro.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SF Pro Bold';
+  src: url('../font/SF-Pro.ttf') format('truetype');
+  font-weight: 700;
+}
+
 /* NewYork 폰트 */
 @font-face {
   font-family: 'New York';
@@ -31,4 +49,10 @@
   font-family: 'New York Italic';
   src: url('../font/NewYorkItalic.ttf') format('truetype');
   font-weight: normal;
+}
+
+@font-face {
+  font-family: 'New York Black Italic';
+  src: url('../font/NewYorkItalic.ttf') format('truetype');
+  font-weight: 934;
 }

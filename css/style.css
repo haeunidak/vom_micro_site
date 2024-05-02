@@ -343,3 +343,80 @@ body {
   position: absolute;
   animation: flyOutRightOpenDate 1s forwards;
 }
+
+.container .story_container .intro_title_wrapper >div .title_bold {
+  color: #FFF;
+  font-family: "SF Pro Medium Italic", sans-serif;
+  font-size: 17vh;
+  font-style: italic;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.container .story_container .intro_title_wrapper >div .title {
+  color: #FFF;
+  font-family: "SF Pro Regular Italic", sans-serif;
+  font-size: 11vh;
+  font-style: italic;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.container .story_container .intro_title_wrapper .second_title .and {
+  color: #14E85C;
+  font-family: "SF Pro Bold", sans-serif;
+  font-size: 8vh;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.container .story_container .intro_title_wrapper .third_title .luxury_title {
+  color: #FFF;
+  font-family: "New York Black Italic", sans-serif;
+  font-size: 17vh;
+  font-style: italic;
+  line-height: 100%;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+}
+
+.story_container .intro_title_wrapper {
+  position: absolute;
+  top: 35%;
+  left: -100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  white-space: nowrap;
+}
+
+.story_container .intro_title_wrapper.on {
+  animation: flyInLeftIntroTitleWrapper 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.story_container .intro_title_wrapper.off {
+  animation: flyOutLeftIntroTitleWrapper 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.story_container .story_img {
+  margin-top: 35vh;
+  margin-left: 5%;
+}
+
+.story_container .car_img {
+  position: absolute;
+  z-index: 10;
+  top: calc(71vh - 65px);
+  left: -94vh;
+}
+.story_container .car_img >img {
+  width: 56vh;
+}
+
+.story_container .car_img.on {
+  animation: flyInLeftCarImg 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.story_container .car_img.off {
+  animation: flyOutLeftCarImg 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}

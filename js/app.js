@@ -132,6 +132,10 @@ window.addEventListener('scroll', function () {
 function storyContainerViewCheck() {
   const storyContainer = document.querySelector('.story_container');
   const storyContainerRect = storyContainer.getBoundingClientRect();
+  const since = document.querySelector('.since');
+  const year = document.querySelector('.year');
+  const introTitleWrapper = document.querySelector('.intro_title_wrapper');
+  const carImg = document.querySelector('.car_img');
 
   const isInStoryView = (
     storyContainerRect.top >= 0 &&
@@ -140,28 +144,70 @@ function storyContainerViewCheck() {
 
   // 스토리 컨테이너가 화면에 들어왔는지 여부를 확인
   if (isInStoryView) {
-    const since = document.querySelector('.since');
-    const year = document.querySelector('.year');
 
     if (since && !since.classList.contains('on')) {
+      if (since.classList.contains('off')) {
+        since.classList.remove('off');
+      }
+
       since.classList.add('on');
     }
 
     if (year && !year.classList.contains('on')) {
+      if (year.classList.contains('off')) {
+        year.classList.remove('off');
+      }
+
       year.classList.add('on');
     }
 
+    setTimeout(() => {
+      if (introTitleWrapper && !introTitleWrapper.classList.contains('on')) {
+        if (introTitleWrapper.classList.contains('off')) {
+          introTitleWrapper.classList.remove('off');
+        }
+
+        introTitleWrapper.classList.add('on');
+      }
+      setTimeout(() => {
+        if (carImg && !carImg.classList.contains('on')) {
+          if (carImg.classList.contains('off')) {
+            carImg.classList.remove('off');
+          }
+
+          carImg.classList.add('on');
+        }
+      }, 1000);
+    }, 1000);
+
   } else {
-    const since = document.querySelector('.since');
-    const year = document.querySelector('.year');
-
-    if (since && since.classList.contains('on')) {
+    if (since && since.classList.contains('on')
+      && !since.classList.contains('off')) {
       since.classList.remove('on');
+      since.classList.add('off');
     }
 
-    if (year && year.classList.contains('on')) {
+    if (year && year.classList.contains('on')
+      && !year.classList.contains('off')) {
       year.classList.remove('on');
+      year.classList.add('off');
     }
+
+    setTimeout(() => {
+      if (introTitleWrapper && introTitleWrapper.classList.contains('on')
+        && !introTitleWrapper.classList.contains('off')) {
+        introTitleWrapper.classList.remove('on');
+        introTitleWrapper.classList.add('off');
+      }
+
+      setTimeout(() => {
+        if (carImg && carImg.classList.contains('on')
+          && !carImg.classList.contains('off')) {
+          carImg.classList.remove('on');
+          carImg.classList.add('off');
+        }
+      }, 1000);
+    }, 1000);
   }
 }
 

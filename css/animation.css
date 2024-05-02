@@ -93,3 +93,55 @@
     opacity: 0;
   }
 }
+
+@keyframes flyInLeftIntroTitleWrapper {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  25% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-40px);
+    opacity: 1;
+  }
+  50% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(40px);
+    opacity: 1;
+  }
+  100% {
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyInLeftCarImg {
+  0% {
+    opacity: 1;
+    transform: translate(-100%, 0) translateX(0);
+  }
+  50% {
+    transform: translate(187vh, 0) translateX(-20px);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(187vh, 0) translateX(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(187vh, 0) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyOutLeftCarImg {
+  0% {
+    opacity: 1;
+    transform: translate(187vh, 0) translateX(0);
+  }
+  100% {
+    transform: translate(-100%, 0) translateX(0);
+    opacity: 1;
+  }
+}
